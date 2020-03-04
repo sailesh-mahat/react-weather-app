@@ -1,5 +1,6 @@
 import React from 'react';
 import apiConfig from './apiKeys';
+import DayCard from './DayCard';
 
 class WeekContainer extends React.Component {
   state = {
@@ -22,10 +23,14 @@ class WeekContainer extends React.Component {
     })
   }
 
+  formatDayCards = () => {
+    return this.state.dailyData.map((reading, index) => <DayCard reading={reading} key={index} />)
+  }
+
   render() {
     return (
       <div>
-        <h1>Hello World!</h1>
+        {this.formatDayCards()}
       </div>
     )
   }
