@@ -5,27 +5,27 @@ const DegreeToggle = ({degreeType, updateForecastDegree}) => {
     <React.Fragment>
     <div className="form-check form-check-inline">
       <input
-      class="form-check-input"
+      className="form-check-input"
       type="radio"
       name="degree-type"
       id="celsius"
       value="celsius"
-      checked={degreeType === "celsius"}
+      defaultChecked={degreeType === "celsius"}
       onChange={updateForecastDegree}
       />
-      <label class="form-check-label" for="celsius">Celsius</label>
+      <label className="form-check-label" htmlFor="celsius">Celsius</label>
     </div>
     <div className="form-check form-check-inline">
         <input
-        class="form-check-input"
+        className="form-check-input"
         type="radio"
         name="degree-type"
-        id="farenheit"
+        id="fahrenheit"
         value="fahrenheit"
-        checked={degreeType === "fahrenheit"}
+        defaultChecked={degreeType === "fahrenheit"}
         onChange={updateForecastDegree}
         />
-        <label class="form-check-label" for="farenheit">Fahrenheit</label>
+        <label className="form-check-label" htmlFor="fahrenheit">Fahrenheit</label>
       </div>
     </React.Fragment>
   )
